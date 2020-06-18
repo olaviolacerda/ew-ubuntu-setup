@@ -4,11 +4,7 @@ name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [pull_request, push]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,4 +20,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Test installations
-      run: sh statup.sh
+      run: sh startup.sh
